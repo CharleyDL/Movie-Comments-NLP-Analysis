@@ -1,11 +1,15 @@
-# nlp_sentiment_analysis_movie_comment
+# nlp_sentiment_analysis_movie_comments
 --------------------------------------
 
 Modèle NLP pour analyser les commentaires de films postés par les spectateurs pour indiquer s'ils sont positifs ou négatifs.
 
+- Data : CSV comprenant les commentaires scrapés
+- Img : Images pour Wordclouds
+- Modules : Code de webscraping, Test en console du modèle (input par user)
 - Notebooks : Contient le preprocessing, les wordclouds des commentaires selon les catégories et les tests modèles;  
 - Website : Application web pour tester en ligne les commentaires que l'user entre.
-- Modules : Code de webscraping, Test en console du modèle (input par user)
+
+
 
 --------------------------------------
 
