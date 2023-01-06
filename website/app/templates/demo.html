@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="wip" class="wip">
+    <div>
+        <h1 class="wip-text">
+            Write your comment to be analyzed!
+        </h1>
+    </div>
+
+    <div class="wip-block">
+        <div>
+            <form action="" method="post">
+                <label for="comment"><em>(Only French - Not support english yet)</em></label>
+
+                <textarea id="comment" class="text-area" name="comment"
+                          rows="8" cols="58" minlength="3" maxlength="10000" required></textarea>
+
+                <div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
+                    <input href="#myModal" id="btn-pred" class="submit-button" 
+                           type='submit' data-toggle="modal" value="Analyze"></input>
+                </div>
+            </form>
+
+            <div id="result" class="modal fade">
+                {% if predict == 1 %}
+                <div class="modal-dialog modal-confirm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="icon-box pos">
+                                <i class="material-icons">&#xE8DC;</i>
+                            </div>
+                            <h4 class="modal-title">Positive!</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-center">The audience appreciates your creation!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success btn-block">OK</button>
+                        </div>
+                    </div>
+                </div>
+                {% elif predict == 0 %}
+                <div class="modal-dialog modal-confirm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="icon-box neg">
+                                <i class="material-icons">&#xE8DB;</i>
+                            </div>
+                            <h4 class="modal-title">Negative!</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-center">The audience doesn't compliment your creation.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success btn-block">OK</button>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+
+
+        <!-- {% if predict == 1 %}
+                <p>Positive</p>
+            {% elif predict == 0 %}
+                <p>Negative</p>
+            {% endif %}
+        </div> -->
+    </div>
+
+
+</section>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="hero" class="hero d-flex align-items-center">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 d-flex flex-column justify-content-center">
+        <h1 class="aos-init aos-animate" data-aos="fade-up">
+          We offer a modern solution to analyze audience comment
+        </h1>
+        <h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+          Know if their sentiment are positive or negative about your creation!
+        </h2>
+        <div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
+          <div class="btn-get-lft">
+            <a href="{{ url_for('demo') }}"
+              class="btn-get-started d-inline-flex align-items-center justify-content-center align-self-center">
+              <span>Get Started</span>
+              <i class="bi"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 hero-img aos-init aos-animate" data-aos="zoom-out" data-aos-delay="200">
+        <img class="img-fluid" , src="{{url_for('static', filename='../static/img/background/main_illustration.svg')}}"
+          alt="illustration girl with like and unlike thumb">
+      </div>
+    </div>
+  </div>
+
+</section>
+{% endblock %}
