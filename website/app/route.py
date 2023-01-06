@@ -28,7 +28,7 @@ dbOK = myDB.is_connected()
 
 
 # Loading the NLP Sentiment Analysis Model
-nlp = joblib.load('../nlp_sent_analysis.joblib')
+nlp = joblib.load('nlp_sent_analysis.joblib')
 vect = nlp['vectorizer']
 model = nlp['model']
 
