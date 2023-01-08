@@ -9,7 +9,10 @@ Modèle NLP pour analyser les commentaires de films postés par les spectateurs 
 - Notebooks : Contient le preprocessing, les wordclouds des commentaires selon les catégories et les tests modèles;  
 - Website : Application web pour tester en ligne les commentaires que l'user entre.
 
-
+Pour faire fonctionner: 
+- installer l'environnement avec les librairies >> requirements.txt (pip install -r requirements.txt)
+- aller jusqu'au dossier website dans la console et lancer la commande : flask run
+- cliquer sur le lien dans la console
 
 --------------------------------------
 
